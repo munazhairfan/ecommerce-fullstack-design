@@ -73,7 +73,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       <div className='bg-slate-100'>
         <p className='px-4 pt-4 font-bold text-lg'>Similar Products</p>
         <div className='flex overflow-auto w-full gap-2 p-3'>
-          {similarProducts.map((p) => (
+          {similarProducts.map((p: any) => (
             <Link href={`/item/${p._id}`} key={p._id} className='w-36 h-56 bg-white p-4 flex-none border border-slate-300 rounded-md hover:shadow-xs transition-shadow block'>
               <div className="w-full h-24 relative overflow-hidden rounded mb-2">
                 <img src={p.image} alt={p.name} className='w-full h-full object-cover' />

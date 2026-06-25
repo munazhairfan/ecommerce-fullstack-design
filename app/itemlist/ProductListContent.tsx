@@ -1,9 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 
 interface Product {
   _id: string;
@@ -15,21 +14,10 @@ interface Product {
   stock: number;
 }
 
-export default function ProductListContent() {
-  const [products, setProducts] = useState<Product[]>([]);
+export default function ProductListContent({ products }: { products: Product[] }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
   const { dispatch } = useCart();
-  const searchParams = useSearchParams();
-  const query = searchParams.get('q');
-
-  useEffect(() => {
-    const url = query ? `/api/products/search?q=${query}` : '/api/products';
-    fetch(url)
-      .then(res => res.json())
-      .then(res => setProducts(res.data))
-      .catch(err => console.error('Error fetching products:', err));
-  }, [query]);
 
   // Pagination logic
   const indexOfLastItem = currentPage * itemsPerPage;

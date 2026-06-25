@@ -33,7 +33,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row bg-white">
         <div className="w-full h-80 flex relative flex-none md:w-1/2">
           <Image 
             fill 
@@ -78,7 +78,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               <div className="w-full h-24 relative overflow-hidden rounded mb-2">
                 <img src={p.image} alt={p.name} className='w-full h-full object-cover' />
               </div>
-              <p className='font-bold'>${p.price.toFixed(2)}</p>
+              <p className='font-bold text-black'>${p.price.toFixed(2)}</p>
               <p className='text-mist-400 text-xs line-clamp-2 mt-1'>{p.name}</p>
             </Link>
           ))}

@@ -49,7 +49,7 @@ const Header = () => {
               onChange={(e) => setSearch(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
               placeholder="Search products, brands, categories..." 
-              className="w-full bg-[#F3F3F3] pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-blue-500 focus:bg-white text-sm transition-all"
+              className="text-mist-800 w-full bg-[#F3F3F3] pl-10 pr-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-blue-500 focus:bg-white text-sm transition-all"
             />
             <button 
               onClick={handleSearch}

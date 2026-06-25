@@ -72,15 +72,15 @@ export default function ProductListContent({ products }: { products: Product[] }
             <button 
               disabled={currentPage === 1}
               onClick={() => setCurrentPage(prev => prev - 1)}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              className="text-mist-800 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
             >
               Previous
             </button>
-            <span>Page {currentPage} of {totalPages}</span>
+            <span className='text-black'>Page {currentPage} of {totalPages}</span>
             <button 
               disabled={currentPage === totalPages}
               onClick={() => setCurrentPage(prev => prev + 1)}
-              className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
+              className="text-mist-800 px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
             >
               Next
             </button>

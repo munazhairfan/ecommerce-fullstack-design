@@ -40,7 +40,7 @@ export default function LoginPage() {
           placeholder="Password" 
           className="border p-2 rounded" 
         />
-        <button type="submit" className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700">Login</button>
+        <button type="submit" className="bg-blue-600 p-2 rounded hover:bg-blue-700">Login</button>
       </form>
       <p className="mt-4 text-sm">
         Don't have an account? <a href="/signup" className="text-blue-600 hover:underline">Sign up</a>
